@@ -28,7 +28,11 @@ public class App {
 		System.out.println("Insert Done...");
 		
 		
+		Student student = studentDao.getStudent(1);
+		System.out.println(student.getName()+" --- "+student.getCourse().getCourseName()+" --- "+student.getCourse().getDuration());
 		
+
+		System.out.println("Get Done...");
 
 	}
 }

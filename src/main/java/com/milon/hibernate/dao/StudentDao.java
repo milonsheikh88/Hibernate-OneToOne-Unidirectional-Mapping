@@ -29,9 +29,9 @@ public class StudentDao {
 		}
 	}
 
-    public List<Student> getAllStudent() {
+    public Student getStudent(int studentId) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            return session.createQuery("from Student", Student.class).list();
+            return session.get(Student.class, studentId);
         }
     }
 }
